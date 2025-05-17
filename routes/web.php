@@ -16,9 +16,9 @@ Route::post('/loginSubmit', [AuthController::class, 'loginsubmit']);
 
 Route::middleware(CheckIsLogged::class)->group(function(){
 
-Route::get('/', [MainController::class, 'index']);
-Route::get('/newNote', [MainController::class, 'newNote']);
-Route::get('/logout', [MainController::class, 'logout']);
+Route::get('/', [MainController::class, 'index'])->name('home');
+Route::get('/newNote', [MainController::class, 'newNote'])->name('new');
+Route::get('/logout', [MainController::class, 'logout'])->name('logout');
 
 });
 
