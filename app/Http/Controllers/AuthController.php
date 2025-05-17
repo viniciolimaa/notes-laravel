@@ -62,12 +62,10 @@ class AuthController extends Controller
         //as an object instace of the model's class
         // $userModel = new User();
         // $users = $userModel->all()->toArray();
-        echo 'Login com sucesso!';
+        return redirect('/');
     }
 
-    public function logout(){
-        echo 'logout';
-    }
+    
     
 
 }
